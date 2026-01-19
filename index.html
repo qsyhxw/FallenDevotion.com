@@ -1,1158 +1,617 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fallen Devotion Guide - Complete Walkthrough, Characters & Free Play</title>
-    <meta name="description" content="Complete Fallen Devotion visual novel guide with full walkthrough, all character routes, endings guide, and download links. Play the emotional romance story free.">
+    <title>Fallen Devotion Guide - Walkthroughs, Endings & Characters</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Complete Fallen Devotion visual novel guide. All endings, character routes, download links, and Nietzsche philosophy analysis. Free demo walkthrough.">
+    <meta name="keywords" content="fallen devotion, visual novel guide, clive donovan, endings guide, yandere vn, dark romance game">
     <link rel="canonical" href="https://fallendevotion.com/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fallendevotion.com/">
-    <meta property="og:title" content="Fallen Devotion - Complete Visual Novel Guide">
-    <meta property="og:description" content="Master all romance routes in Fallen Devotion with our complete guide. Multiple endings, character walkthroughs, and free download links.">
-    <meta property="og:image" content="https://fallendevotion.com/images/fallen-devotion-guide.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://fallendevotion.com/">
-    <meta property="twitter:title" content="Fallen Devotion Complete Guide">
-    <meta property="twitter:description" content="Complete visual novel walkthrough with all character routes, endings, and download options.">
-    <meta property="twitter:image" content="https://fallendevotion.com/images/fallen-devotion-guide.jpg">
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
      crossorigin="anonymous"></script>
+
+
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3LX9QKEHCB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3LX9QKEHCB');
+    </script>
     
-    <!-- Critical CSS inline -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fallen Devotion Guide - Complete Walkthrough Hub">
+    <meta property="og:description" content="Your comprehensive resource for Fallen Devotion - walkthroughs, character analysis, and philosophical insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fallendevotion.com/">
+    <meta property="og:image" content="https://fallendevotion.com/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fallen Devotion Guide - Walkthroughs & Analysis">
+    <meta name="twitter:description" content="Complete guide for Fallen Devotion visual novel. All endings, characters, and philosophy themes.">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
     <style>
-        :root {
-            --primary-color: #2c1810;
-            --secondary-color: #8b4513;
-            --accent-color: #daa520;
-            --text-light: #f5f5dc;
-            --text-dark: #2c1810;
-            --bg-gradient: linear-gradient(135deg, #1a0e0a, #2c1810, #3d2817);
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --border-color: rgba(218, 165, 32, 0.2);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Georgia', serif;
-            background: var(--bg-gradient);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
+        /* Smooth scroll behavior */
+        html {
             scroll-behavior: smooth;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        /* Custom gradient for hero */
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
-        /* Header Styles */
-        .header {
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 2px solid var(--accent-color);
+        /* Card hover effect */
+        .card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
         
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--accent-color);
-            text-decoration: none;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-link {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-link:hover {
-            color: var(--accent-color);
-        }
-        
-        .nav-link:hover::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--accent-color);
-        }
-        
-        /* Mobile Menu */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23201410" width="1200" height="800"/><circle cx="200" cy="200" r="3" fill="%23daa520" opacity="0.1"/><circle cx="800" cy="300" r="2" fill="%23daa520" opacity="0.1"/><circle cx="1000" cy="150" r="2" fill="%23daa520" opacity="0.1"/><path d="M0,400 Q300,300 600,400 T1200,400 L1200,800 L0,800 Z" fill="%23daa520" opacity="0.05"/></svg>');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            margin-top: 80px;
-        }
-        
-        .hero-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
-            font-weight: bold;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-            font-style: italic;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .game-stats {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 1rem;
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--accent-color);
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-        
-        .btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            min-width: 160px;
-            text-align: center;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(45deg, var(--accent-color), #ffd700);
-            color: var(--text-dark);
-            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-light);
-            border: 2px solid var(--accent-color);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--accent-color);
-            color: var(--text-dark);
-            transform: translateY(-2px);
-        }
-        
-        /* Quick Navigation */
-        .quick-nav {
-            background: var(--card-bg);
-            padding: 2rem;
-            margin: 3rem 0;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-        }
-        
-        .quick-nav h2 {
-            text-align: center;
-            color: var(--accent-color);
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-        
-        .quick-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .quick-link {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-            text-align: center;
-        }
-        
-        .quick-link:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: var(--accent-color);
-            transform: translateY(-3px);
-        }
-        
-        .quick-link-icon {
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 1rem;
-        }
-        
-        .quick-link h3 {
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-        
-        .quick-link p {
-            opacity: 0.9;
-            font-size: 0.95rem;
-        }
-        
-        /* Content Sections */
-        .content-section {
-            background: var(--card-bg);
-            padding: 3rem 2rem;
-            margin: 3rem 0;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-        }
-        
-        .section-title {
-            font-size: 2.2rem;
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            font-style: italic;
-        }
-        
-        /* Characters Section */
-        .character-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .character-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid var(--border-color);
-        }
-        
-        .character-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(218, 165, 32, 0.2);
-            border-color: var(--accent-color);
-        }
-        
-        .character-card h3 {
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-        
-        .character-traits {
-            margin: 1rem 0;
-        }
-        
-        .trait-tag {
-            display: inline-block;
-            background: rgba(218, 165, 32, 0.2);
-            color: var(--accent-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin: 0.2rem;
-            border: 1px solid rgba(218, 165, 32, 0.3);
-        }
-        
-        .pro-tip {
-            background: rgba(218, 165, 32, 0.1);
-            border-left: 4px solid var(--accent-color);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .pro-tip h4 {
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Walkthrough Section */
-        .walkthrough-step {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 10px;
-            border-left: 4px solid var(--accent-color);
-        }
-        
-        .walkthrough-step h4 {
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-        
-        .choice-list {
-            list-style: none;
-            margin: 1rem 0;
-        }
-        
-        .choice-list li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .choice-list li:before {
-            content: "→";
-            color: var(--accent-color);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        /* Download Section */
-        .download-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .download-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-        
-        .download-card:hover {
-            border-color: var(--accent-color);
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-        }
-        
-        .platform-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-            color: var(--accent-color);
-        }
-        
-        .download-card h3 {
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-        
-        .download-card .btn {
-            margin-top: 1rem;
-            width: 100%;
-        }
-        
-        /* Footer */
-        .footer {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 3rem 0 1rem;
-            margin-top: 4rem;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-section h4 {
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-        
-        .footer-section a {
-            color: var(--text-light);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease;
-            opacity: 0.8;
-        }
-        
-        .footer-section a:hover {
-            color: var(--accent-color);
-            opacity: 1;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            opacity: 0.7;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: block;
-            }
-            
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: rgba(0, 0, 0, 0.95);
-                flex-direction: column;
-                padding: 1rem;
-                gap: 1rem;
-            }
-            
-            .nav-menu.active {
-                display: flex;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-content {
-                padding: 1rem;
-            }
-            
-            .game-stats {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 1.5rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .quick-links {
-                grid-template-columns: 1fr;
-            }
-            
-            .character-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .download-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .content-section {
-                padding: 2rem 1rem;
-            }
-        }
-        
-        /* Accessibility */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0,0,0,0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        /* Focus styles for keyboard navigation */
-        .btn:focus,
-        .nav-link:focus,
-        .quick-link:focus {
-            outline: 2px solid var(--accent-color);
-            outline-offset: 2px;
-        }
-        
-        /* Smooth animations */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
+        /* Warning banner styling */
+        .warning-banner {
+            background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
         }
     </style>
     
-    <!-- Structured Data -->
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": ["VideoGame", "WebSite"],
-        "name": "Fallen Devotion",
-        "alternateName": "Fallen Devotion Visual Novel",
-        "description": "A captivating visual novel featuring multiple character routes, emotional storylines, and various endings to discover. Free to play with complete guide available.",
-        "url": "https://fallendevotion.com",
-        "genre": ["Visual Novel", "Romance", "Interactive Fiction"],
-        "gamePlatform": ["PC", "Windows", "macOS", "Linux", "Web Browser"],
-        "operatingSystem": ["Windows", "macOS", "Linux"],
-        "applicationCategory": "Game",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "ratingCount": "1284",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock",
-            "url": "https://billetdoux.itch.io/fallen-devotion"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Billetdoux",
-            "url": "https://billetdoux.itch.io"
-        },
-        "creator": {
-            "@type": "Organization",
-            "name": "Billetdoux"
-        },
-        "datePublished": "2024",
-        "inLanguage": "en",
-        "keywords": "fallen devotion, visual novel, romance game, interactive fiction, multiple endings, character routes, walkthrough guide",
-        "potentialAction": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Fallen Devotion Guide",
+          "url": "https://fallendevotion.com/",
+          "description": "Complete guide and walkthrough for Fallen Devotion visual novel",
+          "potentialAction": {
             "@type": "SearchAction",
             "target": "https://fallendevotion.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "Fallen Devotion Guide",
+          "url": "https://fallendevotion.com/",
+          "logo": "https://fallendevotion.com/logo.png",
+          "sameAs": [
+            "https://billetdoux.itch.io/fallen-devotion"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
             {
-                "@type": "Question",
-                "name": "How to play Fallen Devotion for free?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "You can play Fallen Devotion for free on itch.io. Simply visit the official page and click play in browser, or download it for Windows, macOS, or Linux."
-                }
+              "@type": "Question",
+              "name": "Is Fallen Devotion free to download?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Fallen Devotion is currently available as a free demo on itch.io for Windows, macOS, and Linux. The full version is in development."
+              }
             },
             {
-                "@type": "Question", 
-                "name": "How many endings does Fallen Devotion have?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Fallen Devotion features 12+ different endings across 4 main character routes. Each character has multiple possible endings based on your choices throughout the story."
-                }
+              "@type": "Question",
+              "name": "How many endings are in the demo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The current demo features 2-3 playable endings, with more planned for the full release. Each ending depends on the choices you make throughout the story."
+              }
             },
             {
-                "@type": "Question",
-                "name": "What are the main character routes in Fallen Devotion?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The four main romance routes are: Sakura (shy artist), Alex (confident athlete), Morgan (intellectual bookworm), and Riley (mysterious performer). Each has unique storylines and multiple endings."
-                }
+              "@type": "Question",
+              "name": "Who is Clive Donovan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Clive Donovan is the main character in Fallen Devotion - your deceased childhood best friend who has mysteriously returned after three years."
+              }
             },
             {
-                "@type": "Question",
-                "name": "How long does it take to complete Fallen Devotion?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A single playthrough takes approximately 6-10 hours. To experience all routes and endings, expect 25-40 hours of gameplay."
-                }
+              "@type": "Question",
+              "name": "What platforms is the game available on?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fallen Devotion is available for Windows, macOS, and Linux. Download it free from the official itch.io page."
+              }
             }
-        ]
+          ]
+        }
+      ]
     }
     </script>
 </head>
 
-<body>
-    <!-- Skip to content for accessibility -->
-    <a href="#main" class="sr-only">Skip to main content</a>
-    
-    <!-- Header -->
-    <header class="header" role="banner">
-        <div class="container">
-            <nav class="nav" role="navigation" aria-label="Main navigation">
-                <a href="/" class="logo" aria-label="Fallen Devotion Guide Home">Fallen Devotion Guide</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
-                <ul class="nav-menu" role="menubar">
-                    <li role="none"><a href="#characters" class="nav-link" role="menuitem">Characters</a></li>
-                    <li role="none"><a href="#walkthrough" class="nav-link" role="menuitem">Walkthrough</a></li>
-                    <li role="none"><a href="#endings" class="nav-link" role="menuitem">Endings</a></li>
-                    <li role="none"><a href="#download" class="nav-link" role="menuitem">Download</a></li>
-                    <li role="none"><a href="https://www.tumblr.com/fallendev0tionvn" class="nav-link" role="menuitem" target="_blank" rel="noopener">Updates</a></li>
-                </ul>
-            </nav>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between" aria-label="Main navigation">
+            <!-- Logo / Brand -->
+            <div class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <a href="/" class="text-xl font-bold text-gray-900">Fallen Devotion <span class="text-sm font-normal text-gray-600">Guide</span></a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex items-center space-x-6" role="menubar">
+                <li role="none"><a href="/download-play/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Download</a></li>
+                <li role="none"><a href="/endings-guide/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Endings</a></li>
+                <li role="none"><a href="/characters/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Characters</a></li>
+                <li role="none"><a href="/walkthrough/demo/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Walkthrough</a></li>
+                <li role="none"><a href="/philosophy-themes/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Philosophy</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500" aria-label="Toggle menu" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="md:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+            <ul class="px-4 py-2 space-y-2">
+                <li><a href="/download-play/" class="block py-2 text-gray-700 hover:text-purple-600">Download</a></li>
+                <li><a href="/endings-guide/" class="block py-2 text-gray-700 hover:text-purple-600">Endings</a></li>
+                <li><a href="/characters/" class="block py-2 text-gray-700 hover:text-purple-600">Characters</a></li>
+                <li><a href="/walkthrough/demo/" class="block py-2 text-gray-700 hover:text-purple-600">Walkthrough</a></li>
+                <li><a href="/philosophy-themes/" class="block py-2 text-gray-700 hover:text-purple-600">Philosophy</a></li>
+            </ul>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="main" role="main">
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 id="hero-title">Fallen Devotion Complete Guide</h1>
-                    <p class="hero-subtitle">Master Every Route • Unlock All Endings • Free Download</p>
-                    <p class="hero-description">Navigate through four unique romance paths in this emotionally rich visual novel. Our complete guide covers every choice, ending, and secret in Fallen Devotion.</p>
-                    
-                    <div class="game-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">4</span>
-                            <span class="stat-label">Romance Routes</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">12+</span>
-                            <span class="stat-label">Different Endings</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">6-10</span>
-                            <span class="stat-label">Hours Per Route</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">4.7★</span>
-                            <span class="stat-label">Player Rating</span>
-                        </div>
-                    </div>
-                    
-                    <div class="cta-buttons">
-                        <a href="https://billetdoux.itch.io/fallen-devotion" class="btn btn-primary" role="button" aria-label="Play Fallen Devotion free on itch.io" target="_blank" rel="noopener">Play Free Now</a>
-                        <a href="#walkthrough" class="btn btn-secondary" role="button" aria-label="View complete walkthrough guide">Complete Guide</a>
-                        <a href="#download" class="btn btn-secondary" role="button" aria-label="Download game options">Download</a>
-                    </div>
-                </div>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Fallen Devotion - Complete Guide & Walkthrough Hub</h1>
+            <p class="text-lg md:text-xl mb-2 text-purple-100 max-w-3xl mx-auto">
+                Your comprehensive resource for Fallen Devotion - detailed walkthroughs, character psychology, philosophical insights, and community theories.
+            </p>
+            <p class="text-sm text-purple-200 mb-8 max-w-2xl mx-auto">
+                Navigate the dark romance visual novel inspired by Nietzsche's philosophy. Free demo guides, all endings, and character analysis.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="/download-play/" class="bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+                    Download Guide
+                </a>
+                <a href="/endings-guide/" class="bg-purple-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-900 transition border-2 border-white">
+                    View All Endings
+                </a>
             </div>
-        </section>
-
-        <div class="container">
-            <!-- Quick Navigation -->
-            <section class="quick-nav" aria-labelledby="quick-nav-title">
-                <h2 id="quick-nav-title">📖 Quick Navigation</h2>
-                <div class="quick-links">
-                    <a href="#characters" class="quick-link" aria-label="Character guides and romance routes">
-                        <span class="quick-link-icon">💕</span>
-                        <h3>Character Routes</h3>
-                        <p>Complete guide to all 4 romance paths with personality breakdowns and choice strategies</p>
-                    </a>
-                    <a href="#walkthrough" class="quick-link" aria-label="Step-by-step walkthrough">
-                        <span class="quick-link-icon">📋</span>
-                        <h3>Full Walkthrough</h3>
-                        <p>Step-by-step guide through every chapter with critical choice points highlighted</p>
-                    </a>
-                    <a href="#endings" class="quick-link" aria-label="All endings guide">
-                        <span class="quick-link-icon">🏆</span>
-                        <h3>All Endings</h3>
-                        <p>Unlock all 12+ endings with detailed requirements and choice paths</p>
-                    </a>
-                    <a href="#download" class="quick-link" aria-label="Download and play options">
-                        <span class="quick-link-icon">⬇️</span>
-                        <h3>Download & Play</h3>
-                        <p>Free download links for Windows, macOS, Linux, plus online play options</p>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Character Routes Section -->
-            <section class="content-section" id="characters" aria-labelledby="characters-title">
-                <h2 class="section-title" id="characters-title">💕 Character Routes & Romance Guide</h2>
-                <p class="section-subtitle">Master all four romance paths with our detailed character analysis and choice strategies</p>
-                
-                <div class="character-grid">
-                    <div class="character-card">
-                        <h3>🌸 Sakura Route</h3>
-                        <div class="character-traits">
-                            <span class="trait-tag">Shy</span>
-                            <span class="trait-tag">Artistic</span>
-                            <span class="trait-tag">Gentle</span>
-                            <span class="trait-tag">Creative</span>
-                        </div>
-                        <p>A talented artist struggling with self-confidence. Sakura responds well to patience, encouragement, and showing genuine interest in her art.</p>
-                        <p><strong>Key Strategy:</strong> Choose gentle, supportive responses. Ask about her artwork and dreams. Avoid pushy or aggressive choices.</p>
-                        <p><strong>Best Ending Requirement:</strong> Attend all her art exhibitions and consistently choose creative dialogue options.</p>
-                    </div>
-                    
-                    <div class="character-card">
-                        <h3>⚡ Alex Route</h3>
-                        <div class="character-traits">
-                            <span class="trait-tag">Athletic</span>
-                            <span class="trait-tag">Confident</span>
-                            <span class="trait-tag">Loyal</span>
-                            <span class="trait-tag">Direct</span>
-                        </div>
-                        <p>Star athlete with a competitive spirit but hidden vulnerabilities. Values honesty, loyalty, and direct communication above all.</p>
-                        <p><strong>Key Strategy:</strong> Be straightforward and honest. Support their goals and show up when you promise to. Avoid being indirect or wishy-washy.</p>
-                        <p><strong>Best Ending Requirement:</strong> Win the trust challenge in Chapter 5 and consistently choose loyalty-focused options.</p>
-                    </div>
-                    
-                    <div class="character-card">
-                        <h3>📚 Morgan Route</h3>
-                        <div class="character-traits">
-                            <span class="trait-tag">Intellectual</span>
-                            <span class="trait-tag">Bookworm</span>
-                            <span class="trait-tag">Thoughtful</span>
-                            <span class="trait-tag">Witty</span>
-                        </div>
-                        <p>Brilliant student who loves deep conversations and intellectual challenges. Appreciates wit, literary knowledge, and thoughtful analysis.</p>
-                        <p><strong>Key Strategy:</strong> Engage in meaningful discussions. Reference books, philosophy, and current events. Show your intellectual curiosity.</p>
-                        <p><strong>Best Ending Requirement:</strong> Successfully complete the library research project together and choose all philosophical dialogue options.</p>
-                    </div>
-                    
-                    <div class="character-card">
-                        <h3>🎭 Riley Route</h3>
-                        <div class="character-traits">
-                            <span class="trait-tag">Mysterious</span>
-                            <span class="trait-tag">Performer</span>
-                            <span class="trait-tag">Complex</span>
-                            <span class="trait-tag">Guarded</span>
-                        </div>
-                        <p>Enigmatic theater performer with a complicated past. Requires patience to break through their emotional barriers and earn their trust.</p>
-                        <p><strong>Key Strategy:</strong> Show genuine interest in their performances. Be non-judgmental about their past. Demonstrate that you accept them completely.</p>
-                        <p><strong>Best Ending Requirement:</strong> Attend every performance and unlock the "True Past" revelation in Chapter 7.</p>
-                    </div>
-                </div>
-                
-                <div class="pro-tip">
-                    <h4>💡 Pro Romance Tips</h4>
-                    <p><strong>Save Before Major Choices:</strong> Create multiple save files before important decisions. Each character has 2-3 critical choice points that determine your ending.</p>
-                    <p><strong>Character Consistency:</strong> Stay true to your chosen character's personality type. Mixed signals often lead to friendship endings rather than romance.</p>
-                    <p><strong>Hidden Affection Points:</strong> Some choices give hidden affection boosts. Generally, choices that show you remember personal details about your chosen character give bonus points.</p>
-                </div>
-            </section>
-
-            <!-- Complete Walkthrough Section -->
-            <section class="content-section" id="walkthrough" aria-labelledby="walkthrough-title">
-                <h2 class="section-title" id="walkthrough-title">📋 Complete Walkthrough Guide</h2>
-                <p class="section-subtitle">Step-by-step guide through every chapter with all critical choice points</p>
-                
-                <div class="walkthrough-step">
-                    <h4>Chapter 1: First Impressions</h4>
-                    <p><strong>Setting:</strong> School festival - Your first day at the new school</p>
-                    <p><strong>Critical Choice:</strong> "Where do you want to go first at the festival?"</p>
-                    <ul class="choice-list">
-                        <li><strong>"The art exhibition looks interesting"</strong> → Opens Sakura route + 2 affection</li>
-                        <li><strong>"I want to check out the sports demonstrations"</strong> → Opens Alex route + 2 affection</li>
-                        <li><strong>"Is there a quiet place to read or study?"</strong> → Opens Morgan route + 2 affection</li>
-                        <li><strong>"The theater performance starts soon"</strong> → Opens Riley route + 2 affection</li>
-                    </ul>
-                    <p><strong>Important:</strong> This choice determines which character notices you first and affects all future interactions.</p>
-                </div>
-                
-                <div class="walkthrough-step">
-                    <h4>Chapter 2: Getting to Know You</h4>
-                    <p><strong>Setting:</strong> First one-on-one conversation with your chosen character</p>
-                    <p><strong>Universal Strategy:</strong> Ask follow-up questions about their interests. Avoid generic responses like "That's nice" or "Cool."</p>
-                    <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                        <p><strong>Sakura Path:</strong> Ask about her art techniques and inspiration sources</p>
-                        <p><strong>Alex Path:</strong> Show interest in their training regimen and athletic goals</p>
-                        <p><strong>Morgan Path:</strong> Discuss books, theories, or current events</p>
-                        <p><strong>Riley Path:</strong> Ask about their acting experience and favorite roles</p>
-                    </div>
-                </div>
-                
-                <div class="walkthrough-step">
-                    <h4>Chapter 3: Trust Building</h4>
-                    <p><strong>Major Choice Point:</strong> Each character will share something personal and ask for advice</p>
-                    <p><strong>Golden Rule:</strong> Always choose the response that validates their feelings while offering constructive support</p>
-                    <ul class="choice-list">
-                        <li><strong>Sakura's Art Crisis:</strong> "Your art speaks to people in ways you don't even realize" (Best response)</li>
-                        <li><strong>Alex's Competition Anxiety:</strong> "You've trained hard for this. Trust in your preparation" (Best response)</li>
-                        <li><strong>Morgan's Academic Pressure:</strong> "Intelligence isn't just about grades. You think deeply about things" (Best response)</li>
-                        <li><strong>Riley's Past Revelation:</strong> "Thank you for trusting me with this. It doesn't change how I see you" (Best response)</li>
-                    </ul>
-                </div>
-                
-                <div class="walkthrough-step">
-                    <h4>Chapter 5: The Relationship Test</h4>
-                    <p><strong>Critical Decision Point:</strong> Each character will present you with a challenge or test of commitment</p>
-                    <p><strong>Warning:</strong> This chapter determines if you can access the best endings. Wrong choices here lock you out of perfect endings.</p>
-                    <div style="background: rgba(218, 165, 32, 0.1); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                        <p><strong>Success Requirements:</strong></p>
-                        <ul class="choice-list">
-                            <li><strong>Sakura:</strong> Attend her art exhibition despite other commitments</li>
-                            <li><strong>Alex:</strong> Show up to their important game, even if you have conflicts</li>
-                            <li><strong>Morgan:</strong> Complete the collaborative research project thoroughly</li>
-                            <li><strong>Riley:</strong> Attend their solo performance and stay for the after-party</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="walkthrough-step">
-                    <h4>Chapter 7: Climax & Resolution</h4>
-                    <p><strong>Final Choice:</strong> Each route has a crucial final decision that determines your ending</p>
-                    <p><strong>Best Ending Requirements:</strong> Must have made correct choices in Chapters 1, 3, and 5, plus maintain high affection throughout</p>
-                </div>
-                
-                <div class="pro-tip">
-                    <h4>🎯 Walkthrough Pro Tips</h4>
-                    <p><strong>Affection System:</strong> Track your relationship progress through dialogue cues. Characters will be more open and friendly as affection increases.</p>
-                    <p><strong>Multiple Playthroughs:</strong> Some achievements require seeing multiple endings. Start with your preferred character, then branch out.</p>
-                    <p><strong>Secret Scenes:</strong> High affection unlocks bonus CG scenes and extended dialogue options in later chapters.</p>
-                </div>
-            </section>
-
-            <!-- All Endings Guide -->
-            <section class="content-section" id="endings" aria-labelledby="endings-title">
-                <h2 class="section-title" id="endings-title">🏆 Complete Endings Guide</h2>
-                <p class="section-subtitle">Unlock all 12+ endings with our detailed requirements and strategies</p>
-                
-                <div class="walkthrough-step">
-                    <h4>💖 Best Endings (True Love Routes)</h4>
-                    <p><strong>Requirements:</strong> Perfect choice sequence + maximum affection + completion of character-specific challenges</p>
-                    <ul class="choice-list">
-                        <li><strong>Sakura True End:</strong> Support her art career decision + attend all exhibitions + choose creative dialogue options throughout</li>
-                        <li><strong>Alex True End:</strong> Win trust challenge + support athletic dreams + maintain honesty in all interactions</li>
-                        <li><strong>Morgan True End:</strong> Complete research project + engage in all intellectual discussions + choose thoughtful responses</li>
-                        <li><strong>Riley True End:</strong> Attend all performances + unlock past revelation + choose accepting dialogue options</li>
-                    </ul>
-                </div>
-                
-                <div class="walkthrough-step">
-                    <h4>💙 Good Endings (Happy Together)</h4>
-                    <p><strong>Requirements:</strong> Good relationship but missed some optimization choices</p>
-                    <p>These endings show a positive relationship future but without the deep emotional resolution of True Endings. Generally achieved by maintaining medium-high affection but missing 1-2 critical choices.</p>
-                </div>
-                
-                <div class="walkthrough-step">
-                    <h4>💛 Friendship Endings</h4>
-                    <p><strong>Requirements:</strong> Low romantic affection but maintained positive relationship</p>
-                    <p>Occurs when you show interest in multiple characters or consistently choose neutral responses. Characters remain close friends but no romance develops.</p>
-                </div>
-                
-                <div class="walkthrough-step">
-                    <h4>💔 Bad Endings</h4>
-                    <p><strong>Triggers:</strong> Consistently poor choices or neglecting your chosen character</p>
-                    <p>Generally result from: ignoring character events, choosing responses that contradict their values, or failing major trust challenges.</p>
-                </div>
-                
-                <div class="walkthrough-step">
-                    <h4>🌟 Secret Endings</h4>
-                    <p><strong>Hidden Requirements:</strong> Special unlock conditions</p>
-                    <ul class="choice-list">
-                        <li><strong>True Solo Ending:</strong> Deliberately avoid all romantic options and focus on self-growth</li>
-                        <li><strong>Everyone's Friend:</strong> Maintain equal affection with all characters (very difficult balance)</li>
-                        <li><strong>New Game+ Ending:</strong> Available only after completing at least 3 different character routes</li>
-                        <li><strong>Creator's Ending:</strong> Find and interact with hidden easter eggs throughout multiple playthroughs</li>
-                    </ul>
-                </div>
-                
-                <div class="pro-tip">
-                    <h4>🎭 Ending Collection Strategy</h4>
-                    <p><strong>Recommended Order:</strong> Start with your favorite character's True Ending, then work backwards through their other endings before moving to a new character.</p>
-                    <p><strong>Save Management:</strong> Keep saves before major choice points in each chapter. This allows you to quickly branch to different endings without full replays.</p>
-                    <p><strong>Achievement Tracking:</strong> Some endings unlock bonus content or special scenes in subsequent playthroughs.</p>
-                </div>
-            </section>
-
-            <!-- Download Section -->
-            <section class="content-section" id="download" aria-labelledby="download-title">
-                <h2 class="section-title" id="download-title">⬇️ Download & Play Options</h2>
-                <p class="section-subtitle">Get Fallen Devotion free on all platforms</p>
-                
-                <div class="download-grid">
-                    <div class="download-card">
-                        <span class="platform-icon">🎮</span>
-                        <h3>Play Online</h3>
-                        <p>Start playing immediately in your browser. No download required. Perfect for trying the game before downloading.</p>
-                        <p><strong>Pros:</strong> Instant access, no storage space needed</p>
-                        <p><strong>Cons:</strong> Requires internet connection, limited save options</p>
-                        <a href="https://billetdoux.itch.io/fallen-devotion" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Play Fallen Devotion online free">Play in Browser</a>
-                    </div>
-                    
-                    <div class="download-card">
-                        <span class="platform-icon">🖥️</span>
-                        <h3>Windows Download</h3>
-                        <p>Full desktop experience with enhanced graphics and unlimited save slots. Best performance and features.</p>
-                        <p><strong>Requirements:</strong> Windows 10+ (64-bit)</p>
-                        <p><strong>Size:</strong> ~500MB download</p>
-                        <a href="https://billetdoux.itch.io/fallen-devotion" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Download for Windows">Download for Windows</a>
-                    </div>
-                    
-                    <div class="download-card">
-                        <span class="platform-icon">🍎</span>
-                        <h3>macOS Download</h3>
-                        <p>Optimized for Mac systems with full Retina display support. Smooth performance on all modern Macs.</p>
-                        <p><strong>Requirements:</strong> macOS 10.14+</p>
-                        <p><strong>Size:</strong> ~520MB download</p>
-                        <a href="https://billetdoux.itch.io/fallen-devotion" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Download for macOS">Download for Mac</a>
-                    </div>
-                    
-                    <div class="download-card">
-                        <span class="platform-icon">🐧</span>
-                        <h3>Linux Download</h3>
-                        <p>Native Linux build compatible with most distributions. Perfect for open-source enthusiasts.</p>
-                        <p><strong>Requirements:</strong> Ubuntu 18.04+ or equivalent</p>
-                        <p><strong>Size:</strong> ~480MB download</p>
-                        <a href="https://billetdoux.itch.io/fallen-devotion" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Download for Linux">Download for Linux</a>
-                    </div>
-                </div>
-                
-                <div class="pro-tip">
-                    <h4>📱 Installation & Setup Tips</h4>
-                    <p><strong>First-time Setup:</strong> After downloading, create a dedicated save folder to back up your progress. The game saves automatically, but manual backups help preserve your completion data.</p>
-                    <p><strong>Performance Optimization:</strong> For older computers, try running in windowed mode or lowering the graphics quality in settings.</p>
-                    <p><strong>Cloud Saves:</strong> Consider using cloud storage (Dropbox, Google Drive) to sync saves between devices.</p>
-                </div>
-            </section>
-
-            <!-- Updates and Community -->
-            <section class="content-section" aria-labelledby="community-title">
-                <h2 class="section-title" id="community-title">🌟 Community & Updates</h2>
-                <p class="section-subtitle">Stay connected with the Fallen Devotion community</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="text-align: center;">
-                        <h3 style="color: var(--accent-color); margin-bottom: 1rem;">📱 Official Updates</h3>
-                        <p>Follow the developer's Tumblr for the latest news, behind-the-scenes content, and upcoming projects.</p>
-                        <a href="https://www.tumblr.com/fallendev0tionvn" class="btn btn-secondary" style="margin-top: 1rem;" target="_blank" rel="noopener">Follow on Tumblr</a>
-                    </div>
-                    
-                    <div style="text-align: center;">
-                        <h3 style="color: var(--accent-color); margin-bottom: 1rem;">🎮 Original Game Page</h3>
-                        <p>Visit the official itch.io page to leave reviews, report bugs, and support the developer.</p>
-                        <a href="https://billetdoux.itch.io/fallen-devotion" class="btn btn-secondary" style="margin-top: 1rem;" target="_blank" rel="noopener">Visit itch.io Page</a>
-                    </div>
-                </div>
-                
-                <div class="pro-tip">
-                    <h4>💬 Community Tips</h4>
-                    <p><strong>Spoiler Etiquette:</strong> When discussing endings or major plot points online, always use spoiler tags to preserve the experience for new players.</p>
-                    <p><strong>Bug Reports:</strong> If you encounter technical issues, report them on the official itch.io page with your system specifications.</p>
-                    <p><strong>Fan Content:</strong> The developer welcomes fan art and creative content based on Fallen Devotion - just tag them on Tumblr to share!</p>
-                </div>
-            </section>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Game Guide</h4>
-                    <a href="#characters">Character Routes</a>
-                    <a href="#walkthrough">Complete Walkthrough</a>
-                    <a href="#endings">All Endings Guide</a>
-                    <a href="#download">Download Options</a>
+    <!-- ==================== CONTENT WARNING (Compliance) ==================== -->
+    <aside class="warning-banner text-gray-900 py-3 border-b-4 border-orange-600" role="alert">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm md:text-base">
+                <strong>Content Notice:</strong> Fallen Devotion contains mature themes including psychological thriller elements, dark romance, and philosophical exploration. Recommended for ages 18+. 
+                <a href="https://988lifeline.org" target="_blank" rel="noopener" class="underline font-semibold hover:text-gray-700">Mental health resources available here.</a>
+            </p>
+        </div>
+    </aside>
+
+    <!-- ==================== START HERE (New Player Quick Nav) ==================== -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Start Here</h2>
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                
+                <!-- Card 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg shadow card-hover text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2">New to the Game?</h3>
+                    <p class="text-gray-700 mb-4 text-sm">First-time player? Start with our beginner's guide to understand the story and mechanics.</p>
+                    <a href="/beginner-guide/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm font-medium">
+                        Beginner's Guide
+                    </a>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Access</h4>
-                    <a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener">Play Online Free</a>
-                    <a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener">Download Game</a>
-                    <a href="#characters">Character Analysis</a>
-                    <a href="#walkthrough">Critical Choice Points</a>
+                
+                <!-- Card 2 -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg shadow card-hover text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2">Download & Install</h3>
+                    <p class="text-gray-700 mb-4 text-sm">Get the free demo for PC, Mac, or Linux. System requirements and installation help included.</p>
+                    <a href="/download-play/" class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition text-sm font-medium">
+                        Download Guide
+                    </a>
                 </div>
-                <div class="footer-section">
-                    <h4>Official Links</h4>
-                    <a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener">itch.io Game Page</a>
-                    <a href="https://www.tumblr.com/fallendev0tionvn" target="_blank" rel="noopener">Developer Tumblr</a>
-                    <a href="https://billetdoux.itch.io" target="_blank" rel="noopener">Billetdoux Games</a>
+                
+                <!-- Card 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg shadow card-hover text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2">Start Playing</h3>
+                    <p class="text-gray-700 mb-4 text-sm">Ready to play? Follow our demo walkthrough to make the right choices from the beginning.</p>
+                    <a href="/walkthrough/demo/" class="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition text-sm font-medium">
+                        Demo Walkthrough
+                    </a>
                 </div>
-                <div class="footer-section">
-                    <h4>Popular Searches</h4>
-                    <a href="#walkthrough">fallen devotion walkthrough</a>
-                    <a href="#characters">fallen devotion characters</a>
-                    <a href="#endings">fallen devotion endings</a>
-                    <a href="#download">fallen devotion download</a>
-                </div>
+                
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Fallen Devotion Guide. Game developed by Billetdoux. This fan-made guide is not officially affiliated with the developer.</p>
-                <p>All game content and characters are property of their respective creators. Guide content available under Creative Commons.</p>
+        </div>
+    </section>
+
+    <!-- ==================== POPULAR GUIDES (Content Discovery) ==================== -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Popular Guides</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Guide 1: All Endings -->
+                <article class="bg-white rounded-lg shadow card-hover overflow-hidden">
+                    <div class="h-2 bg-gradient-to-r from-red-500 to-pink-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="/endings-guide/" class="hover:text-purple-600 transition">All Endings Guide</a>
+                        </h3>
+                        <p class="text-gray-700 text-sm mb-4">Complete breakdown of all demo endings. Learn how to unlock each route and the choices that matter most.</p>
+                        <a href="/endings-guide/" class="text-purple-600 font-semibold text-sm hover:underline inline-flex items-center">
+                            Read Guide 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Guide 2: Clive Character -->
+                <article class="bg-white rounded-lg shadow card-hover overflow-hidden">
+                    <div class="h-2 bg-gradient-to-r from-purple-500 to-indigo-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="/characters/clive-donovan/" class="hover:text-purple-600 transition">Clive Donovan Analysis</a>
+                        </h3>
+                        <p class="text-gray-700 text-sm mb-4">Deep dive into Clive's backstory, personality, and the Dionysian symbolism behind his character design.</p>
+                        <a href="/characters/clive-donovan/" class="text-purple-600 font-semibold text-sm hover:underline inline-flex items-center">
+                            Learn More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Guide 3: Philosophy -->
+                <article class="bg-white rounded-lg shadow card-hover overflow-hidden">
+                    <div class="h-2 bg-gradient-to-r from-yellow-500 to-orange-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="/philosophy-themes/" class="hover:text-purple-600 transition">Nietzsche Philosophy Themes</a>
+                        </h3>
+                        <p class="text-gray-700 text-sm mb-4">Explore how Nietzsche's Apollonian vs Dionysian concepts shape the game's narrative and characters.</p>
+                        <a href="/philosophy-themes/" class="text-purple-600 font-semibold text-sm hover:underline inline-flex items-center">
+                            Explore Themes
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Guide 4: Similar Games -->
+                <article class="bg-white rounded-lg shadow card-hover overflow-hidden">
+                    <div class="h-2 bg-gradient-to-r from-green-500 to-teal-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="/games-like-fallen-devotion/" class="hover:text-purple-600 transition">Games Like Fallen Devotion</a>
+                        </h3>
+                        <p class="text-gray-700 text-sm mb-4">Discover 10 similar yandere and dark romance visual novels with detailed comparisons and recommendations.</p>
+                        <a href="/games-like-fallen-devotion/" class="text-purple-600 font-semibold text-sm hover:underline inline-flex items-center">
+                            See Recommendations
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Guide 5: Choices -->
+                <article class="bg-white rounded-lg shadow card-hover overflow-hidden">
+                    <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="/choices-consequences/" class="hover:text-purple-600 transition">Choices & Consequences</a>
+                        </h3>
+                        <p class="text-gray-700 text-sm mb-4">Database of all dialogue choices and their impact on relationships, endings, and story progression.</p>
+                        <a href="/choices-consequences/" class="text-purple-600 font-semibold text-sm hover:underline inline-flex items-center">
+                            View Database
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Guide 6: Updates -->
+                <article class="bg-white rounded-lg shadow card-hover overflow-hidden">
+                    <div class="h-2 bg-gradient-to-r from-pink-500 to-rose-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">
+                            <a href="/update-log/" class="hover:text-purple-600 transition">Development Updates</a>
+                        </h3>
+                        <p class="text-gray-700 text-sm mb-4">Track the game's development progress, voice acting additions, and full release timeline updates.</p>
+                        <a href="/update-log/" class="text-purple-600 font-semibold text-sm hover:underline inline-flex items-center">
+                            Latest News
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CHARACTER PROFILES (Quick Overview) ==================== -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Meet the Characters</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Explore the complex personalities shaped by philosophical themes and moral ambiguity.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                
+                <!-- Character 1: Clive -->
+                <div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="aspect-w-3 aspect-h-4 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Clive Donovan</h3>
+                        <p class="text-sm text-gray-700 mb-3">Your deceased childhood friend who has mysteriously returned - personifying eternal return and Dionysian spirit.</p>
+                        <a href="/characters/clive-donovan/" class="text-purple-700 font-semibold text-sm hover:underline">Full Profile →</a>
+                    </div>
+                </div>
+                
+                <!-- Character 2: Dariel -->
+                <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="aspect-w-3 aspect-h-4 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Dariel</h3>
+                        <p class="text-sm text-gray-700 mb-3">A mysterious character whose true motives remain unclear - fan theories suggest deeper connections.</p>
+                        <a href="/characters/dariel/" class="text-gray-700 font-semibold text-sm hover:underline">Full Profile →</a>
+                    </div>
+                </div>
+                
+                <!-- Character 3: All Characters -->
+                <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="aspect-w-3 aspect-h-4 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">More Characters</h3>
+                        <p class="text-sm text-gray-700 mb-3">Julian, Silas, Mia and other supporting cast members - each with unique philosophical roles.</p>
+                        <a href="/characters/" class="text-blue-700 font-semibold text-sm hover:underline">View All →</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        Is Fallen Devotion free to download?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>Yes, Fallen Devotion is currently available as a free demo on <a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener" class="text-purple-600 underline">itch.io</a> for Windows, macOS, and Linux. The full version is in development. See our <a href="/download-play/" class="text-purple-600 underline">download guide</a> for installation instructions.</p>
+                    </div>
+                </details>
+                
+                <!-- FAQ 2 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        What platforms is the game available on?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>Fallen Devotion supports Windows, macOS, and Linux. The game is optimized for desktop/laptop play. Mobile versions are not currently available. Check the <a href="/download-play/" class="text-purple-600 underline">system requirements</a> to ensure compatibility.</p>
+                    </div>
+                </details>
+                
+                <!-- FAQ 3 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        How many endings are in the demo?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>The current demo features 2-3 playable endings, with more planned for the full release. Each ending depends on the choices you make throughout the story. Our <a href="/endings-guide/" class="text-purple-600 underline">complete endings guide</a> explains how to unlock each route.</p>
+                    </div>
+                </details>
+                
+                <!-- FAQ 4 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        Who is Clive Donovan?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>Clive Donovan is the main character - your deceased childhood best friend who has mysteriously returned after three years. His character embodies themes of eternal return and the Dionysian spirit from Nietzsche's philosophy. Read our <a href="/characters/clive-donovan/" class="text-purple-600 underline">complete character analysis</a>.</p>
+                    </div>
+                </details>
+                
+                <!-- FAQ 5 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        What is the connection to Nietzsche's philosophy?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>The game is inspired by Nietzsche's works, particularly "Thus Spoke Zarathustra" and "The Birth of Tragedy." Characters and story arcs explore concepts like the Apollonian vs Dionysian, eternal return, guilt, and redemption. Our <a href="/philosophy-themes/" class="text-purple-600 underline">philosophy guide</a> breaks down these connections in detail.</p>
+                    </div>
+                </details>
+                
+                <!-- FAQ 6 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        When will the full game be released?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>The full release date has not been officially announced yet. The developer (billetdoux) is publishing updates gradually, including voice acting additions. Follow our <a href="/update-log/" class="text-purple-600 underline">development updates page</a> for the latest news.</p>
+                    </div>
+                </details>
+                
+                <!-- FAQ 7 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        Are there similar games I might like?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>Yes! If you enjoy Fallen Devotion, check out other yandere and dark romance visual novels like "Your Boyfriend," "Doki Doki Literature Club," and "Boyfriend to Death." See our <a href="/games-like-fallen-devotion/" class="text-purple-600 underline">complete recommendations list</a> with comparisons.</p>
+                    </div>
+                </details>
+                
+                <!-- FAQ 8 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        Is the game suitable for all ages?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>No. Fallen Devotion is recommended for ages 18+ due to mature themes including psychological thriller elements, dark romance, and complex philosophical content. The game includes content warnings for themes that may be distressing.</p>
+                    </div>
+                </details>
+                
+                <!-- FAQ 9 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        How do I unlock all endings?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>Each ending requires specific dialogue choices throughout the game. Key decisions affect your relationship with Clive and determine which ending you reach. Our <a href="/endings-guide/" class="text-purple-600 underline">endings guide</a> provides step-by-step walkthroughs and an interactive choice flowchart.</p>
+                    </div>
+                </details>
+                
+                <!-- FAQ 10 -->
+                <details class="bg-white rounded-lg shadow-sm">
+                    <summary class="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition">
+                        Where can I find the official developer?
+                    </summary>
+                    <div class="px-6 pb-4 text-gray-700">
+                        <p>The developer billetdoux is active on <a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener" class="text-purple-600 underline">itch.io</a> and <a href="https://www.tumblr.com/fallendev0tionvn" target="_blank" rel="noopener" class="text-purple-600 underline">Tumblr</a>. For updates, behind-the-scenes content, and developer insights, follow the official Tumblr account.</p>
+                    </div>
+                </details>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-6">
+                
+                <!-- About -->
+                <div>
+                    <h3 class="text-white font-bold mb-3">About This Site</h3>
+                    <p class="text-sm text-gray-400">
+                        Comprehensive fan-made guide for Fallen Devotion visual novel. We provide walkthroughs, character analysis, and community resources.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-bold mb-3">Popular Pages</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/endings-guide/" class="hover:text-white transition">All Endings Guide</a></li>
+                        <li><a href="/characters/clive-donovan/" class="hover:text-white transition">Clive Character Guide</a></li>
+                        <li><a href="/download-play/" class="hover:text-white transition">Download Instructions</a></li>
+                        <li><a href="/philosophy-themes/" class="hover:text-white transition">Philosophy Themes</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Community -->
+                <div>
+                    <h3 class="text-white font-bold mb-3">Community</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/fan-theories/" class="hover:text-white transition">Fan Theories</a></li>
+                        <li><a href="/update-log/" class="hover:text-white transition">Development Updates</a></li>
+                        <li><a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener" class="hover:text-white transition">Official itch.io ↗</a></li>
+                        <li><a href="https://www.tumblr.com/fallendev0tionvn" target="_blank" rel="noopener" class="hover:text-white transition">Developer Tumblr ↗</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-white font-bold mb-3">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy-policy/" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="/disclaimer/" class="hover:text-white transition">Disclaimer</a></li>
+                        <li><a href="/contact/" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p class="mb-2">
+                    <strong>Disclaimer:</strong> This is an unofficial fan-made guide. Fallen Devotion is created by billetdoux. All game content, characters, and story elements are © their respective owners.
+                </p>
+                <p>
+                    © 2026 Fallen Devotion Guide. Not affiliated with the official developer. 
+                    <a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener" class="underline hover:text-white">Play the official game here</a>.
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- ==================== MOBILE MENU SCRIPT ==================== -->
     <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileToggle = document.querySelector('.mobile-menu-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (mobileToggle && navMenu) {
-                mobileToggle.addEventListener('click', function() {
-                    navMenu.classList.toggle('active');
-                    const isExpanded = navMenu.classList.contains('active');
-                    mobileToggle.setAttribute('aria-expanded', isExpanded);
-                });
-            }
-
-            // Smooth scrolling for anchor links
-            const anchorLinks = document.querySelectorAll('a[href^="#"]');
-            anchorLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        e.preventDefault();
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (navMenu.classList.contains('active')) {
-                            navMenu.classList.remove('active');
-                            mobileToggle.setAttribute('aria-expanded', 'false');
-                        }
-                    }
-                });
-            });
-
-            // Add loading animation for external links
-            const externalLinks = document.querySelectorAll('a[target="_blank"]');
-            externalLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    const originalText = this.textContent;
-                    this.innerHTML = originalText + ' <span class="loading"></span>';
-                    
-                    setTimeout(() => {
-                        this.textContent = originalText;
-                    }, 1000);
-                });
-            });
+        // Simple mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         });
-
-        // Performance monitoring
-        if ('performance' in window) {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    const perfData = performance.getEntriesByType('navigation')[0];
-                    if (perfData.loadEventEnd - perfData.loadEventStart > 3000) {
-                        console.log('Page load time exceeded 3 seconds');
-                    }
-                }, 0);
-            });
-        }
-
-        // Service Worker registration for caching
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js').catch(function(error) {
-                    console.log('ServiceWorker registration failed: ', error);
-                });
-            });
-        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            if (!menu.contains(event.target) && !btn.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
     </script>
 
-    <!-- Meta tags for crawling -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 </body>
 </html>
