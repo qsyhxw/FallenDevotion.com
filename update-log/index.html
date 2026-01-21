@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallen Devotion Development Updates & Release Timeline (2026)</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Track Fallen Devotion's development progress. Latest updates, voice acting additions, release timeline, and developer news from billetdoux.">
+    <meta name="keywords" content="fallen devotion updates, when will fallen devotion release, development progress, billetdoux news, voice acting updates">
+    <link rel="canonical" href="https://fallendevotion.com/update-log/">
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+     crossorigin="anonymous"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3LX9QKEHCB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3LX9QKEHCB');
+    </script>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fallen Devotion Development Updates & Timeline">
+    <meta property="og:description" content="Stay updated on Fallen Devotion's development progress, voice acting additions, and full release timeline.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fallendevotion.com/update-log/">
+    <meta property="og:image" content="https://fallendevotion.com/og-updates.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fallen Devotion Development Updates">
+    <meta name="twitter:description" content="Latest news on Fallen Devotion's full release and development progress.">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        
+        .info-box {
+            border-left: 4px solid #667eea;
+            background: #f0f4ff;
+        }
+        
+        .warning-box {
+            border-left: 4px solid #f59e0b;
+            background: #fffbeb;
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Fallen Devotion Development Updates & Release Timeline",
+      "description": "Comprehensive development log tracking Fallen Devotion's progress from demo to full release.",
+      "image": "https://fallendevotion.com/updates-featured.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Fallen Devotion Guide"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fallen Devotion Guide",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://fallendevotion.com/logo.png"
+        }
+      },
+      "datePublished": "2026-01-20",
+      "dateModified": "2026-01-20"
+    }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between" aria-label="Main navigation">
+            <div class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <a href="/" class="text-xl font-bold text-gray-900">Fallen Devotion <span class="text-sm font-normal text-gray-600">Guide</span></a>
+            </div>
+            
+            <ul class="hidden md:flex items-center space-x-6" role="menubar">
+                <li role="none"><a href="/download-play/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Download</a></li>
+                <li role="none"><a href="/endings-guide/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Endings</a></li>
+                <li role="none"><a href="/characters/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Characters</a></li>
+                <li role="none"><a href="/walkthrough/demo/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Walkthrough</a></li>
+                <li role="none"><a href="/philosophy-themes/" class="text-gray-700 hover:text-purple-600 transition" role="menuitem">Philosophy</a></li>
+            </ul>
+            
+            <button class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500" aria-label="Toggle menu" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <div class="md:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+            <ul class="px-4 py-2 space-y-2">
+                <li><a href="/download-play/" class="block py-2 text-gray-700 hover:text-purple-600">Download</a></li>
+                <li><a href="/endings-guide/" class="block py-2 text-gray-700 hover:text-purple-600">Endings</a></li>
+                <li><a href="/characters/" class="block py-2 text-gray-700 hover:text-purple-600">Characters</a></li>
+                <li><a href="/walkthrough/demo/" class="block py-2 text-gray-700 hover:text-purple-600">Walkthrough</a></li>
+                <li><a href="/philosophy-themes/" class="block py-2 text-gray-700 hover:text-purple-600">Philosophy</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ==================== BREADCRUMB ==================== -->
+    <div class="bg-gray-100 border-b border-gray-200">
+        <div class="container mx-auto px-4 py-3">
+            <nav aria-label="Breadcrumb" class="text-sm">
+                <ol class="flex items-center space-x-2">
+                    <li><a href="/" class="text-purple-600 hover:underline">Home</a></li>
+                    <li class="text-gray-400">/</li>
+                    <li class="text-gray-700">Development Updates</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-gradient text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Fallen Devotion Development Updates</h1>
+            <p class="text-lg text-purple-100 mb-2 max-w-3xl mx-auto">
+                Track the Journey from Demo to Full Release
+            </p>
+            <p class="text-sm text-purple-200 max-w-2xl mx-auto">
+                Stay informed about development progress, voice acting additions, upcoming features, and official release timeline updates from developer billetdoux.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <div class="container mx-auto px-4 py-12">
+        
+        <!-- Current Status -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Current Development Status</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-green-50 border-l-4 border-green-600 p-4 rounded">
+                    <div class="flex items-center mb-2">
+                        <svg class="w-6 h-6 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <h3 class="font-bold text-green-900">Demo Available</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">Free demo playable on Windows, macOS, and Linux</p>
+                </div>
+                
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                    <div class="flex items-center mb-2">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                        </svg>
+                        <h3 class="font-bold text-blue-900">In Active Development</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">Full version chapters being developed with voice acting</p>
+                </div>
+                
+                <div class="bg-orange-50 border-l-4 border-orange-600 p-4 rounded">
+                    <div class="flex items-center mb-2">
+                        <svg class="w-6 h-6 text-orange-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                        </svg>
+                        <h3 class="font-bold text-orange-900">Release Date TBD</h3>
+                    </div>
+                    <p class="text-sm text-gray-700">No official release date announced yet</p>
+                </div>
+            </div>
+            
+            <div class="info-box p-4">
+                <p class="font-semibold text-purple-900 mb-2">📢 Latest Official Update</p>
+                <p class="text-sm text-gray-700">
+                    The developer has confirmed the game is now <strong>partially voiced</strong> and will publish updates in chapters rather than waiting for a full release. The team is working on releasing two chapters simultaneously for the next update.
+                </p>
+                <p class="text-xs text-gray-600 mt-2">
+                    Source: <a href="https://www.tumblr.com/fallendev0tionvn" target="_blank" rel="noopener" class="text-purple-600 underline">Official Tumblr (@fallendev0tionvn)</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Development Timeline -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Development Timeline</h2>
+            <p class="text-gray-700 mb-6">
+                Track the major milestones in Fallen Devotion's development journey. This timeline is based on official announcements and confirmed updates.
+            </p>
+            
+            <div class="relative border-l-2 border-purple-200 pl-8 space-y-8">
+                
+                <!-- Milestone 1: Demo Release -->
+                <div class="relative timeline-item">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg font-bold text-gray-900">Demo Release</h3>
+                            <span class="text-sm text-gray-600 bg-purple-100 px-3 py-1 rounded">2024</span>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-3">
+                            Initial demo version released on itch.io featuring 3 endings and the opening chapters of Clive's story. The demo introduced players to the philosophical themes and narrative structure.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">✓ Completed</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Free Download</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 2: 2000+ Downloads -->
+                <div class="relative timeline-item">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg font-bold text-gray-900">Community Milestone: 2,000+ Downloads</h3>
+                            <span class="text-sm text-gray-600 bg-purple-100 px-3 py-1 rounded">2024-2025</span>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-3">
+                            The demo reached over 2,000 downloads, prompting the developer to share exclusive art and behind-the-scenes content. Community response has been overwhelmingly positive.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">✓ Achieved</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Community</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 3: Voice Acting Development -->
+                <div class="relative timeline-item">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg font-bold text-gray-900">Voice Acting Integration</h3>
+                            <span class="text-sm text-gray-600 bg-blue-100 px-3 py-1 rounded">In Progress</span>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-3">
+                            The game is now partially voiced, with casting direction by helloyinny. Voice acting is being added progressively to enhance the emotional depth of character interactions.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">⟳ Ongoing</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Audio</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 4: Chapter Development -->
+                <div class="relative timeline-item">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg font-bold text-gray-900">Chapters 1-2 Development</h3>
+                            <span class="text-sm text-gray-600 bg-blue-100 px-3 py-1 rounded">In Progress</span>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-3">
+                            The developer is working on releasing two chapters simultaneously. This approach allows for more cohesive storytelling while delivering substantial content updates.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">⟳ Ongoing</span>
+                            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Content Creation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 5: Planned Features -->
+                <div class="relative timeline-item">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm border-2 border-purple-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg font-bold text-gray-900">Planned Features</h3>
+                            <span class="text-sm text-gray-600 bg-yellow-100 px-3 py-1 rounded">Future</span>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-3">
+                            Upcoming planned additions include animated intro sequences, mini-games, and optional memory unlock features from Clive's perspective to deepen understanding of his character.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">⧗ Planned</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Features</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 6: Full Release -->
+                <div class="relative timeline-item">
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6 shadow-sm border-2 border-purple-300">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg font-bold text-gray-900">Full Version Release</h3>
+                            <span class="text-sm text-gray-600 bg-gray-200 px-3 py-1 rounded">TBD</span>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-3">
+                            No official release date has been announced. The developer has emphasized quality over speed and will release when the full story is ready. Stay tuned to official channels for updates.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded">? Date Unknown</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Full Release</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- What's Being Worked On -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">What's Currently Being Developed</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="border-l-4 border-purple-600 bg-purple-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg text-purple-900 mb-3">✓ Confirmed in Progress</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Voice Acting:</strong> Professional voice actors being cast and recorded for characters</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Story Chapters:</strong> Writing and scripting new chapters beyond the demo content</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Additional Endings:</strong> Expanding the ending count beyond the demo's 3 conclusions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Character Development:</strong> Deeper routes for Dariel, Julian, Silas, and Mia</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="border-l-4 border-blue-600 bg-blue-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg text-blue-900 mb-3">⧗ Planned/Under Consideration</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Animated Intro:</strong> Opening animation explaining Clive's consciousness and backstory</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Mini-Games:</strong> Interactive elements to enhance gameplay variety</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Memory Unlocks:</strong> Optional scenes from Clive's perspective showing his memories</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Enhanced Music:</strong> Expanded soundtrack by onemansymphony</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Information -->
+        <section class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-8 mb-8 border-2 border-purple-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">About the Developer</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-semibold text-purple-900 mb-3">billetdoux (Developer)</h3>
+                    <p class="text-sm text-gray-700 mb-4">
+                        Fallen Devotion is billetdoux's first visual novel project. Despite having no prior coding experience, the developer has created a compelling narrative experience that explores complex philosophical themes inspired by Nietzsche's work.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <p class="text-gray-700"><strong>Role:</strong> Writer, Artist, Developer</p>
+                        <p class="text-gray-700"><strong>First VN:</strong> Yes (learning as they go)</p>
+                        <p class="text-gray-700"><strong>Philosophy Background:</strong> Self-described "philosophy nerd"</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-purple-900 mb-3">Development Team</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><strong>Voice Acting Director:</strong> helloyinny (casting and voice direction)</li>
+                        <li><strong>Music Composer:</strong> onemansymphony (original soundtrack)</li>
+                        <li><strong>Development Approach:</strong> Solo indie project with collaborators</li>
+                    </ul>
+                    
+                    <div class="mt-4 p-3 bg-white rounded border border-purple-200">
+                        <p class="text-xs text-gray-600 mb-2"><strong>Developer's Philosophy:</strong></p>
+                        <p class="text-xs italic text-gray-700">"I wanted to explore themes like eternal return, choices, and the fine line between love and obsession."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Stay Updated -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">How to Stay Updated</h2>
+            <p class="text-gray-700 mb-6">
+                Follow these official channels to receive the latest development news, behind-the-scenes content, and release announcements:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="border-2 border-purple-200 rounded-lg p-6 hover:shadow-lg transition">
+                    <div class="flex items-center mb-3">
+                        <svg class="w-8 h-8 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M21.8 8.001c0-.284-.097-.523-.29-.717a.971.971 0 00-.718-.291H3.208c-.284 0-.523.097-.717.29a.972.972 0 00-.29.718v7.998c0 .283.097.522.29.716.194.194.433.291.717.291H20.792c.285 0 .524-.097.718-.291a.973.973 0 00.29-.716V8.001zm-2 .712L12 13.97 4.2 8.713V8h15.6v.713z"/>
+                        </svg>
+                        <h3 class="text-lg font-bold text-gray-900">Official Tumblr</h3>
+                    </div>
+                    <p class="text-sm text-gray-700 mb-4">Primary platform for development updates, artwork, and developer commentary</p>
+                    <a href="https://www.tumblr.com/fallendev0tionvn" target="_blank" rel="noopener" class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition text-sm font-medium">
+                        Follow @fallendev0tionvn ↗
+                    </a>
+                </div>
+                
+                <div class="border-2 border-blue-200 rounded-lg p-6 hover:shadow-lg transition">
+                    <div class="flex items-center mb-3">
+                        <svg class="w-8 h-8 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.68c.223-.198-.054-.308-.346-.11l-6.4 4.02-2.76-.918c-.6-.187-.612-.6.125-.89l10.782-4.156c.5-.18.943.108.78.89z"/>
+                        </svg>
+                        <h3 class="text-lg font-bold text-gray-900">Official itch.io Page</h3>
+                    </div>
+                    <p class="text-sm text-gray-700 mb-4">Demo downloads, version updates, and community comments</p>
+                    <a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm font-medium">
+                        Visit itch.io Page ↗
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-6 info-box p-4">
+                <p class="text-sm text-gray-700">
+                    <strong>📌 Tip:</strong> The developer posts most frequently on Tumblr. Check the official account regularly for the latest progress updates, character art reveals, and development insights.
+                </p>
+            </div>
+        </section>
+
+        <!-- Release Expectations -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">When Can We Expect the Full Release?</h2>
+            
+            <div class="warning-box p-6 mb-6">
+                <p class="font-semibold text-orange-900 mb-3">⏰ No Official Release Date</p>
+                <p class="text-sm text-gray-700 mb-2">
+                    The developer has not announced a specific release date for the full version. Given that this is a solo indie project with the developer learning game development as they go, rushing is not the priority.
+                </p>
+                <p class="text-sm text-gray-700">
+                    <strong>Developer's Approach:</strong> Quality over speed. The full release will happen when the story is complete and polished.
+                </p>
+            </div>
+            
+            <h3 class="font-semibold text-gray-900 mb-3">What We Know About the Release Strategy:</h3>
+            <ul class="space-y-3 text-gray-700 mb-6">
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span><strong>Chapter-Based Updates:</strong> Rather than waiting years for a complete release, the developer will publish updates chapter by chapter</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span><strong>Multi-Chapter Releases:</strong> The next update aims to include two chapters simultaneously for more substantial content</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span><strong>Demo Will Remain Free:</strong> The demo will continue to be available while development progresses</span>
+                </li>
+            </ul>
+            
+            <div class="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
+                <p class="text-sm text-gray-700">
+                    <strong>Community Patience Appreciated:</strong> The developer has expressed gratitude for player support while managing the challenges of solo development. Mental health and sustainable development pace are priorities.
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="px-4 py-3 cursor-pointer font-semibold hover:bg-gray-100 transition">
+                        Will the full game be free like the demo?
+                    </summary>
+                    <div class="px-4 pb-3 text-gray-700 text-sm">
+                        This has not been officially confirmed. While the demo is free, the developer may choose to price the full version to support continued development. Any pricing decisions will be announced on official channels.
+                    </div>
+                </details>
+                
+                <details class="bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="px-4 py-3 cursor-pointer font-semibold hover:bg-gray-100 transition">
+                        Will my demo save file work with the full version?
+                    </summary>
+                    <div class="px-4 pb-3 text-gray-700 text-sm">
+                        Save file compatibility has not been confirmed. It's possible that due to engine updates or structural changes, you may need to restart when the full version releases. Keep an eye on official announcements for clarification.
+                    </div>
+                </details>
+                
+                <details class="bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="px-4 py-3 cursor-pointer font-semibold hover:bg-gray-100 transition">
+                        How can I support the developer?
+                    </summary>
+                    <div class="px-4 pb-3 text-gray-700 text-sm">
+                        Share the game with friends, leave positive reviews on itch.io, create fan art (tag @fallendev0tionvn on Tumblr), and provide constructive feedback. The developer welcomes community engagement and appreciation for the work.
+                    </div>
+                </details>
+                
+                <details class="bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="px-4 py-3 cursor-pointer font-semibold hover:bg-gray-100 transition">
+                        Why is development taking so long?
+                    </summary>
+                    <div class="px-4 pb-3 text-gray-700 text-sm">
+                        This is a solo indie project by a first-time developer learning game development from scratch. Creating a visual novel involves writing, art, programming, voice direction, and more. The developer prioritizes quality and sustainable development pace over rushing to release.
+                    </div>
+                </details>
+                
+                <details class="bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="px-4 py-3 cursor-pointer font-semibold hover:bg-gray-100 transition">
+                        Will there be more characters beyond Clive?
+                    </summary>
+                    <div class="px-4 pb-3 text-gray-700 text-sm">
+                        Yes! The full version will expand on other characters like Dariel, Julian, Silas, and Mia, who are introduced in the demo. Expect deeper character routes and additional romantic/narrative paths.
+                    </div>
+                </details>
+                
+                <details class="bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="px-4 py-3 cursor-pointer font-semibold hover:bg-gray-100 transition">
+                        What platforms will the full game support?
+                    </summary>
+                    <div class="px-4 pb-3 text-gray-700 text-sm">
+                        Based on the demo, expect Windows, macOS, and Linux support. Mobile versions have not been announced. Check official channels for any platform expansion updates.
+                    </div>
+                </details>
+                
+                <details class="bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="px-4 py-3 cursor-pointer font-semibold hover:bg-gray-100 transition">
+                        Can I help with development (testing, translation, etc.)?
+                    </summary>
+                    <div class="px-4 pb-3 text-gray-700 text-sm">
+                        The developer has not publicly requested volunteer assistance, but you can reach out via Tumblr messages or itch.io comments to offer specific skills. Be respectful of their time and workflow.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related Content -->
+        <section class="bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg p-8 border-2 border-purple-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">While You Wait</h2>
+            <p class="text-gray-700 mb-6">Explore more Fallen Devotion content while development continues:</p>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="/beginner-guide/" class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold text-purple-700 mb-2">Beginner's Guide</h3>
+                    <p class="text-sm text-gray-600">Start playing the demo with our complete guide</p>
+                </a>
+                
+                <a href="/characters/clive-donovan/" class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold text-purple-700 mb-2">Clive Character Analysis</h3>
+                    <p class="text-sm text-gray-600">Deep dive into Clive's psychology and symbolism</p>
+                </a>
+                
+                <a href="/philosophy-themes/" class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold text-purple-700 mb-2">Philosophy Themes</h3>
+                    <p class="text-sm text-gray-600">Understand the Nietzschean concepts in the game</p>
+                </a>
+                
+                <a href="/games-like-fallen-devotion/" class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold text-purple-700 mb-2">Similar Games</h3>
+                    <p class="text-sm text-gray-600">Discover other dark romance visual novels</p>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-6">
+                
+                <div>
+                    <h3 class="text-white font-bold mb-3">About This Site</h3>
+                    <p class="text-sm text-gray-400">
+                        Comprehensive fan-made guide for Fallen Devotion visual novel. We provide walkthroughs, character analysis, and community resources.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-3">Popular Pages</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/endings-guide/" class="hover:text-white transition">All Endings Guide</a></li>
+                        <li><a href="/characters/clive-donovan/" class="hover:text-white transition">Clive Character Guide</a></li>
+                        <li><a href="/download-play/" class="hover:text-white transition">Download Instructions</a></li>
+                        <li><a href="/philosophy-themes/" class="hover:text-white transition">Philosophy Themes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-3">Community</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/fan-theories/" class="hover:text-white transition">Fan Theories</a></li>
+                        <li><a href="/update-log/" class="hover:text-white transition">Development Updates</a></li>
+                        <li><a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener" class="hover:text-white transition">Official itch.io ↗</a></li>
+                        <li><a href="https://www.tumblr.com/fallendev0tionvn" target="_blank" rel="noopener" class="hover:text-white transition">Developer Tumblr ↗</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-3">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy-policy/" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="/disclaimer/" class="hover:text-white transition">Disclaimer</a></li>
+                        <li><a href="/contact/" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p class="mb-2">
+                    <strong>Disclaimer:</strong> This is an unofficial fan-made guide. Fallen Devotion is created by billetdoux. All game content, characters, and story elements are © their respective owners.
+                </p>
+                <p>
+                    © 2026 Fallen Devotion Guide. Not affiliated with the official developer. 
+                    <a href="https://billetdoux.itch.io/fallen-devotion" target="_blank" rel="noopener" class="underline hover:text-white">Play the official game here</a>.
+                </p>
+                <p class="mt-2 text-xs">Last updated: January 2026 | Information based on official developer announcements</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MOBILE MENU SCRIPT ==================== -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            if (!menu.contains(event.target) && !btn.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
