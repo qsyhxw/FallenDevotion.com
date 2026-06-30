@@ -43,6 +43,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://fallendevotion.com/official-links/</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fallendevotion.com/endings-guide/</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -103,3 +109,4 @@
     <priority>0.25</priority>
   </url>
 </urlset>
+
