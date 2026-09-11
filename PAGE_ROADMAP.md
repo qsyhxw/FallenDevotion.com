@@ -4,7 +4,7 @@ This roadmap records the approved page-level work from the GSC SEO audit. All ro
 
 | Order | URL | Status | Decision | Scope | Baseline | 28/56/90-day review |
 |---:|---|---|---|---|---|---|
-| 1 | `/walkthrough/demo/` | PUBLISHED | KEEP + EXPAND | Demo play order, route choices, all 3 endings; legacy `.html` URL remains a separate redirect task | GSC 2026-08-11–09-08: 2 clicks, 198 impressions, 1.01% CTR, avg position 21.32 | CTR ≥ 2%, ≥ 4 clicks/28d, position ≤ 18; then reassess at 56/90d |
+| 1 | `/walkthrough/demo/` | PUBLISHED | KEEP + EXPAND | Demo play order, route choices, all 3 endings; legacy `.html` URL is covered by the Cloudflare Pages redirect | GSC 2026-08-11–09-08: 2 clicks, 198 impressions, 1.01% CTR, avg position 21.32 | CTR ≥ 2%, ≥ 4 clicks/28d, position ≤ 18; then reassess at 56/90d |
 | 2 | `/characters/clive-donovan/` | PUBLISHED | KEEP + EXPAND | Own Clive-specific intent; keep confirmed facts separate from interpretation | GSC recent: 40 impressions, 6 clicks, 15% CTR, avg position 6.5 | ≥ 8 clicks/28d, CTR ≥ 12%, position ≤ 6; then reassess at 56/90d |
 | 3 | `/full-game/` | PUBLISHED | KEEP + EXPAND | Current demo/full-game status and release-date verification | Query cluster: 710 impressions, 91 clicks split across homepage/download; page had no dedicated GSC row | ≥ 20 impressions/28d, ≥ 3 clicks, CTR ≥ 5%; then reassess at 56/90d |
 | 4 | `/download-play/` + `/official-links/` | PUBLISHED | KEEP SEPARATE | Download page owns platform installation; official-links owns channel navigation and safety routing | GSC 2026-08-11–09-08: 73 clicks, 898 impressions, 8.13% CTR, position 9.37 | Maintain CTR ≥ 7%, position ≤ 10, no APK/full-game ownership drift; review at 28/56/90d |
@@ -18,8 +18,8 @@ This round has **no approved NEW PAGE**. Return to GSC expansion review only aft
 
 ## Technical boundary
 
-The legacy `.html` walkthrough and Clive URLs are compatibility files with `noindex` and canonical links to the slash URLs. A true server-side 301 is a separate technical task because the hosting redirect mechanism is not confirmed here.
+The legacy `.html` walkthrough and Clive files remain compatibility fallbacks with `noindex` and canonical links to the slash URLs. Cloudflare Pages now handles the true server-side 301 normalization through the root `_redirects` file.
 
-## Redirect implementation prerequisite
+## Redirect implementation
 
-Live URL checks on September 11, 2026 showed the deployed slash walkthrough URL redirecting to the no-slash URL, while the repository canonical tags and sitemap use the slash form. Do not add `.htaccess`, `_redirects`, or another host-specific rule until the actual hosting layer is identified. The next technical task must make the slash URL the only 200 response and send no-slash plus `.html` variants to it with one 301 hop, then recheck canonical, sitemap, breadcrumb, and internal links.
+Cloudflare Pages is confirmed as the deployment layer. The root `_redirects` file now sends the walkthrough and Clive no-slash/`.html` variants to their slash URLs with one 301 hop. After deployment, verify that each slash URL is the only 200 response and recheck canonical, sitemap, breadcrumb, and internal links.
