@@ -19,3 +19,7 @@ This round has **no approved NEW PAGE**. Return to GSC expansion review only aft
 ## Technical boundary
 
 The legacy `.html` walkthrough and Clive URLs are compatibility files with `noindex` and canonical links to the slash URLs. A true server-side 301 is a separate technical task because the hosting redirect mechanism is not confirmed here.
+
+## Redirect implementation prerequisite
+
+Live URL checks on September 11, 2026 showed the deployed slash walkthrough URL redirecting to the no-slash URL, while the repository canonical tags and sitemap use the slash form. Do not add `.htaccess`, `_redirects`, or another host-specific rule until the actual hosting layer is identified. The next technical task must make the slash URL the only 200 response and send no-slash plus `.html` variants to it with one 301 hop, then recheck canonical, sitemap, breadcrumb, and internal links.
