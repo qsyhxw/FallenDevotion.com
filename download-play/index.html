@@ -99,6 +99,12 @@
             font-size: 0.9em;
         }
 
+        p code,
+        li code {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
         pre {
             background: #1f2937;
             color: #f9fafb;
@@ -344,7 +350,7 @@
             <div class="grid lg:grid-cols-4 gap-8">
                 
                 <!-- ==================== TABLE OF CONTENTS (Sidebar) ==================== -->
-                <aside class="lg:col-span-1">
+                <aside class="lg:col-span-1 min-w-0">
                     <div class="toc-sticky bg-white rounded-lg shadow-md p-6">
                         <h2 class="text-lg font-bold mb-4 text-gray-900">Quick Navigation</h2>
                         <nav aria-label="Table of contents">
@@ -377,7 +383,7 @@
                 </aside>
 
                 <!-- ==================== MAIN ARTICLE CONTENT ==================== -->
-                <article class="lg:col-span-3 article-content">
+                <article class="lg:col-span-3 article-content min-w-0">
                     
                     <!-- Introduction -->
                     <div class="bg-white rounded-lg shadow-md p-8 mb-8">
